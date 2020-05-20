@@ -27,11 +27,11 @@ p{
     padding-top: 10px;
     width:100;
 }
-.container-verybig{
+
+
+#bandeausaison4{
     background-image: url(https://media.discordapp.net/attachments/709643068499820545/709653278970871828/combat.jpg);
     background-repeat: no-repeat;
-    height: 3000px;
-    max-width: 3000px;
 }
 
 #bandeausaison4 .annonce{
@@ -68,6 +68,46 @@ p{
     color: #ebdec2;
     margin-top: 10px;
     text-decoration: underline;
-    display: flex;
+    display: inline-block;
 }
 
+#bandeausaison4 .annonce:hover { 
+    background-color: rgba(255, 176, 29, 0.274);
+ }
+
+#bandeausaison4 .ensavoir:hover { 
+    background-color: rgba(255, 176, 29, 0.274);
+ }
+
+ #bandeausaison4 h2 {
+    color: white;
+   padding: 10px;
+   font-family: Semplicita Pro,Open Sans,Arial,Helvetica,sans-serif;
+   font-weight: 700;
+   font-size: 1.4rem;
+}
+#bandeausaison4 h2 b {
+    color: #f8b700;
+   font-size: 1rem;
+   font-family: Open Sans,Arial,Helvetica,sans-serif;
+   font-weight:normal;
+   display: inline-block;
+   padding: 20px;
+}
+#bandeausaison4 .vignette {
+   display: inline-block;
+   padding: 23px;
+
+}
+#bandeausaison4 .vignette h2 {
+    color: #f8b700;
+    font-size: 1.2rem;
+    font-weight: 600;
+
+}
+#bandeausaison4 .vignette h3 {
+    color: white;
+    font-size: 1rem;
+   padding-left: 13px;
+   font-weight: 300;
+}

@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="fr">
   <head>
@@ -6,12 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css2?family=Jost:ital@0;1&display=swap" rel="stylesheet">
+	
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/style.css" >
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+		<link rel="stylesheet" href="css/style.css" >
     <title>TP wow</title>
   </head>
+  
   <body>
 	  
 	  
@@ -20,41 +21,136 @@
 	  <section id="bandeausaison4">
 		
 			<div class="container p-0 container-verybig">
-
-					<div class="row no-gutters">
-						<div class="col-12">
-							<h1>
-								La saison 4 de battle for Azeroth commence
-							</h1>
-						</div>
+				<div class="row no-gutters">
+					<div class="col-12">
+						<h1>
+							La saison 4 de Battle for Azeroth commence
+						</h1>
+					</div>
 					
-						<div class="col-8">
-							<p>
-								Affrontez le Dieu très ancien N’Zoth et ses sbires à Ny’alotha, la cité en éveil, 
-								plongez au cœur d’un nouveau raid à douze boss, terrassez vos adversaires dans l’arène et sur les champs de bataille, et mettez votre courage 
-								à l’épreuve dans les donjons de pierre mythique pour gagner d’incroyables récompenses !
-								<br/>
-								<a href="#">Découvrir Battle for Azeroth</a>
-								<br/>
-							</p>
-						
+					<div class="col-6">
+						<p>
+							Affrontez le Dieu très ancien N’Zoth et ses sbires à Ny’alotha, la cité en éveil, 
+							plongez au cœur d’un nouveau raid à douze boss, terrassez vos adversaires dans l’arène et sur les champs de bataille, et mettez votre courage 
+							à l’épreuve dans les donjons de pierre mythique pour gagner d’incroyables récompenses !
+							<br/>
+							<a href="#">Découvrir Battle for Azeroth</a>
+							<br/>
+						</p>
 					
-						</div>
-						<div class="col-6"></div>
-						<div class="col-12 text-left">
-						
-							<a  href="#" class="annonce">   
-								Acheter battle for Azeroth
-							
-							</a>
-							<a href="#" class="ensavoir">
-								En savoir plus
-								
-							</a>
-						</div>
 				
 					</div>
+					<div class="col-6"></div>
+					<div class="col-12 text-left">
+					
+						<a  href="#" class="annonce">   
+							Acheter battle for Azeroth
+						
+						</a>
+						<a href="#" class="ensavoir">
+							En savoir plus
+
+						</a>
+					</div>
+			
+				</div>
+				<!--
+					Nous allons faire les 4 vignettes du bandeau sans respecter exactement la dimension des espaces entre vignettes. Pourquoi?
+					Pour n'utiliser que les classes bootstrap qui permettent de faire cette mise en page sans modifier le css des  colonnes ou du row comme il est fait plus bas dans la section notesdemiseajour.
+					La ligne contenant les 4 vignettes n'a pas la classe no-gutters qui enève les marges par défauts.
+					Car par défaut les row ont des margin négatives à -15px et appliquent des padding de 15px aux colonnes. Ici nous laissons ces margin négatives  au div row et les padding
+					aux colonnes, mais nous changeons les valeurs avec mx-n1 et px-2 pour avoir des dimensions approchées au site d'origine.
+					Ces margins sur le row  et padding sur les colonnes ont pour effet d'avoir des espaces entre les colonnes et d'annuler cet espace sur les extrémités pour que le bord des vignettes colle au container.
+				
+				-->
+				<div class="row mx-n2">
+					<div class="col-12 px-2">
+						<h2>
+							Actualités et nouveautés <b>Toutes les actualités</b>
+						</h2>
+					</div>
+					<div class="col-3 px-2">
+						<!--
+							Plutot que d'utiliser une image, nous utiliserons un div avec un bg-image. Cela permet de régler la hauteur de l'image avec padding-top plutot que height.
+							padding-top a l'avantage de pouvoir s'exprimer en % de la largeur et ainsi de garder le mee ratio pour l'image qq soit la taille de l'écran.
+
+						
+						-->
+						<div class="vignette" style="background-image:url(images/gnome.jpg)">
+							
+							<!--
+								On utilise une div class="texte" qui sera positionnée en absolute pour venir faire un calque par dessus le div class="vignette". 
+								On pourra alors utiliser les propriétés css bottom et left pour poistionner ce calque par dessus le div class="vignette".
+								le div class="vignette" devra aussi avoir postion:relative pour servir de repère de référence pour le placement.
+							
+							-->
+							<div class="texte">
+								<h3>
+									15 mai 2020
+								</h3>
+								<h2>
+									Correctifs: 14 mai 2020
+								</h2>
+							</div>
+							<!--
+							 le div class="icone" sera aussi un claque postionné à droite
+							-->
+							<div class="icone">
+								<!--
+									On utilise les fontawesome pour faire le picto.
 								
+								-->
+								<i class="fas fa-comment-alt"></i> <span>5</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-3 px-2">
+						<div class="vignette" style="background-image:url(images/foret.jpg)">
+							<div class="texte">
+								<h3>
+									15 mai 2020
+								</h3>
+								<h2>
+									Correctifs: 14 mai 2020
+								</h2>
+							</div>
+							<div class="icone">
+								<i class="fas fa-comment-alt"></i> <span>1</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-3 px-2">
+						<div class="vignette" style="background-image:url(images/victoire.jpg)">
+							<div class="texte">
+								<h3>
+									17 avril 2020
+								</h3>
+								<h2>
+									Durée du bonus d’expérience de 100 % Vents de la sagesse prolongée !
+								</h2>
+							</div>
+							<div class="icone">
+								<i class="fas fa-comment-alt"></i> <span>41</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-3 px-2">
+						<div class="vignette" style="background-image:url(images/colonne.jpg)">
+							<div class="texte">
+								<h3>
+									14 avril 2020
+								</h3>
+								<h2>
+									Aperçu de Shadowlands : Tourment, la tour des Damnés
+								</h2>
+							</div>
+							<div class="icone">
+								<i class="fas fa-comment-alt"></i> <span>23</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				
 			</div>
 		
 		
